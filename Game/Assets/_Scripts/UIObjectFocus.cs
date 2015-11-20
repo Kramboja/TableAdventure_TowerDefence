@@ -3,6 +3,8 @@ using System.Collections;
 
 public class UIObjectFocus : MonoBehaviour {
 
+	public GameObject[] scrollObjects;
+
 	private int scrollPosition;
 	private int maxLength;
 
@@ -20,7 +22,8 @@ public class UIObjectFocus : MonoBehaviour {
 				return;
 			}
 			scrollPosition++;
-			transform.Translate(173,0,0);
+			transform.position = scrollObjects[scrollPosition].transform.position;
+			myGlobals.currentPosition = scrollPosition;
 		}
 		else if(Input.GetAxisRaw("Mouse ScrollWheel") < 0)
 		{
@@ -29,13 +32,8 @@ public class UIObjectFocus : MonoBehaviour {
 				return;
 			}
 			scrollPosition--;
-			transform.Translate(-173,0,0);
-
-		}
-
-		if (Input.GetMouseButton(0))
-		{
-			Debug.Log("StartEventBasedOnInput");
+			transform.position = scrollObjects[scrollPosition].transform.position;
+			myGlobals.currentPosition = scrollPosition;
 		}
 	}
 }

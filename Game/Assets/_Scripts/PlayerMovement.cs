@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour {
 	private float speed 			= 10.0f;
 	private float mouseSensivity 	= 10f;
 	private float verticalRotation 	= 0;
+	CursorLockMode wantedMode;
 
 	private float upDownRange 		= 60f;
 	
 	void Awake()
 	{
-		Screen.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	void Update () 
@@ -32,9 +33,9 @@ public class PlayerMovement : MonoBehaviour {
 	private void buttonPressed()
 	{	
 		if (Input.GetKey(KeyCode.Escape) && Screen.lockCursor)
-			Screen.lockCursor = false;
-		else
-			Screen.lockCursor = true;
+			Cursor.lockState = CursorLockMode.None;
+		else if(Input.GetKey(KeyCode.Escape))
+			Cursor.lockState = CursorLockMode.Locked;
 		
 		float translationV 	= Input.GetAxis ("Vertical") 	* speed;
 		float translationH	= Input.GetAxis ("Horizontal") 	* speed;
