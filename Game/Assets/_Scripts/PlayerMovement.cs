@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	private float upDownRange 		= 60f;
 	
-	void Awake()
+	void Start()
 	{
 		Cursor.lockState = CursorLockMode.Locked;
 	}

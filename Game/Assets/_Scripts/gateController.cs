@@ -14,9 +14,7 @@ public class gateController : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Player")
 		{
-			Debug.Log("Open gate");
 			GetComponent<Animation>().Play("gateopen");
-			//GetComponent<Animation>().CrossFade("GateOpen",.5f);
 		}
 	}
 
@@ -24,7 +22,6 @@ public class gateController : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Player")
 		{
-			Debug.Log("close gate");
 			GetComponent<Animation>().Play("gateclose");
 		}
 	}
