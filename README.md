@@ -13,11 +13,11 @@ In this project my team created a tower defence game. The idea about this game w
 
 ### <a name="team-members"></a> Team members
 #### Developer
-* "Koen van der velden" <koen@kramboja.com>
+* "Koen van der velden" - <koen@kramboja.com>
 
 #### Artist
 * "Romar de Boer" 
-* "Sabrina al Rhali
+* "Sabrina al Rhali"
 
 ---
 
